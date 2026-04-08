@@ -4,7 +4,31 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_POINTING_SCRL_VAL 100
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
 #define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
+    
 
 &mt {
     flavor = "balanced";
@@ -113,8 +137,8 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp AMPERSAND  &kp KP_EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
-&lt 5 AT                    &kp SEMI       &kp PERCENT   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp MINUS                   &kp AMPERSAND  &kp KP_EQUAL  &kp JP_LPAREN         &kp JP_RPAREN                                                       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
+&kp JP_AT                   &kp SEMI       &kp PERCENT   &kp JP_LBRACKET       &kp JP_RBRACKET      &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MULTIPLY  &kp KP_DIVIDE
 &mt LEFT_SHIFT KP_NUMBER_0  &kp COLON      &kp SLASH     &kp QUESTION          &kp EXCLAMATION        &kp UNDERSCORE               &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT          &kp KP_ENTER
 &trans                      &trans         &trans        &trans                &trans                 &trans                       &trans          &trans                                                     &kp PIPE
             >;
