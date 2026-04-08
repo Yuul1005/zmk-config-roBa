@@ -28,8 +28,6 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
-    
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -129,7 +127,7 @@
         FUNCTION {
             bindings = <
 &kp F1  &kp F2          &kp F3          &kp F4           &kp F5                      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans          &kp DOWN        &trans           &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans          &kp UP          &trans           &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
 &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F12
 &trans  &trans          &trans          &trans           &trans  &trans      &trans  &trans                          &kp F13
             >;
@@ -137,10 +135,10 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp AMPERSAND  &kp KP_EQUAL  &kp JP_LPAREN         &kp JP_RPAREN                                                       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
-&kp JP_AT                   &kp SEMI       &kp PERCENT   &kp JP_LBRACKET       &kp JP_RBRACKET      &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&mt LEFT_SHIFT KP_NUMBER_0  &kp COLON      &kp SLASH     &kp QUESTION          &kp EXCLAMATION        &kp UNDERSCORE               &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT          &kp KP_ENTER
-&trans                      &trans         &trans        &trans                &trans                 &trans                       &trans          &trans                                                     &kp PIPE
+&kp MINUS                   &kp AMPERSAND  &kp KP_EQUAL  &kp JP_LPAREN    &kp JP_RPAREN                                                 &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
+&kp JP_AT                   &kp SEMI       &kp PERCENT   &kp JP_LBRACKET  &kp JP_RBRACKET  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&mt LEFT_SHIFT KP_NUMBER_0  &kp COLON      &kp SLASH     &kp QUESTION     &kp EXCLAMATION  &kp UNDERSCORE               &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT          &kp KP_ENTER
+&trans                      &trans         &trans        &trans           &trans           &trans                       &trans          &trans                                                     &kp PIPE
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
