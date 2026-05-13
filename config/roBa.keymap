@@ -29,9 +29,9 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 10000>;
-};
+//&mkp_input_listener {
+//    input-processors = <&zip_temp_layer 4 10000>;     //クリックしたときに10s間AMLを延長する。
+//};
 
 &mt {
     flavor = "balanced";
@@ -39,7 +39,7 @@
 };
 
 &trackball {
-    //automouse-layer = <4>;
+    automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
