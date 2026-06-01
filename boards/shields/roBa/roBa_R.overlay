@@ -19,7 +19,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip=_temp_layer 4 10000>;  //input processer使用したオートマウスレイヤー(トラボを使用して10sレイヤー4が有効になる)
+        input-processors = <&zip_temp_layer 4 10000>;//input processer使用したオートマウスレイヤー(トラボを使用して10sレイヤー4が有効になる)
     };
 };
 
