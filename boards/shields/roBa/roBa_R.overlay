@@ -1,5 +1,6 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
 &default_transform {
     col-offset = <6>;
@@ -76,5 +77,31 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         //automouse-layer = <4>;         //input processerを使用する場合無効化しておく。
+
+            arrows {
+                layers = <3>;
+                bindings =
+                    <&kp RIGHT_ARROW>,
+                    <&kp LEFT_ARROW>,
+                    <&kp UP_ARROW>,
+                    <&kp DOWN_ARROW>;
+
+                tick = <10>;
+                wait-ms = <5>;
+                tap-ms = <5>;
+            };
+
+            volume {
+                layers = <2>;
+                bindings =
+                        <&none>,
+                        <&none>,
+                        <&kp C_VOLUME_UP>,
+                        <&kp C_VOLUME_DOWN>;
+
+                wait-ms = <5>;
+                tap-ms = <5>;
+            };
+
     };
 };
