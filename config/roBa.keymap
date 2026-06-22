@@ -39,7 +39,7 @@
 };
 
 &trackball {
-    automouse-layer = <4>;    ////input processerを使用する場合無効化しておく。
+    //automouse-layer = <4>;    ////input processerを使用する場合無効化しておく。
     scroll-layers = <5>;
 
     // arrows {
